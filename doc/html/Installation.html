@@ -1,0 +1,144 @@
+﻿<html>
+	
+<head>
+	<title>Installation</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 3.9.0.595">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Installation");
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Installation</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="Requirements.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Interface.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">Before this script can run it needs two main things to be taken care of:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li class="rvps2"><span class="rvts6">Configuration</span></li>
+<li class="rvps2"><span class="rvts6">Database tables</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts12">Auto install</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">There is a handy script included in script root and install folder, if you open base folder / install, you will see a dialog like this.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/20130329-Inventory.png"/></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">This script checks the entered credentials, checks for requirements and then populates the database with tables and populates and writes the settings files.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li class="rvps2"><span class="rvts6">MySQL Host : probably localhost or 127.0.0.1 or any other specified by the provider</span></li>
+<li class="rvps2"><span class="rvts6">MySQL Database: Name of the database you want to install</span></li>
+<li class="rvps2"><span class="rvts6">MySQL Username: name of MySQL user</span></li>
+<li class="rvps2"><span class="rvts6">MySQL Password: password of MySQL user</span></li>
+<li class="rvps2"><span class="rvts6">Timezone: place you live at from a selection</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Log in with username: </span><span class="rvts11">admin</span><span class="rvts6"> password: </span><span class="rvts11">password</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Change your password and delete Install folder</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts12">Manual Install</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">If for some reason the auto install shouldn't do the job is supposed to, the manual installation is also easy.</span></p>
+<p class="rvps2"><span class="rvts6">As told, there are 2 things, that you have to do, to make this script work.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li class="rvps2"><span class="rvts6">Configuration</span></li>
+<li class="rvps2"><span class="rvts6">Database tables</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Configuration</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts6">All Laravells configuration files reside in /app/application/config. All Inventory site specific settings reside in /app/application/config/site.</span></p>
+<p class="rvps5"><span class="rvts6">By default there is only an error.php file, containing the sites error settings. After installation there should be 3 files here:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li class="rvps5"><span class="rvts6">application.php - application settings overriding laravels</span></li>
+<li class="rvps5"><span class="rvts6">database.php - database credentials overriding laravels</span></li>
+<li class="rvps5"><span class="rvts6">error.php - error settings overriding laravels</span></li>
+</ul>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Prototypes of the 3 files reside in the installation folder /install/config . The installer then takes these files populates them with data and writes them to config folder. So you have to do the same.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li class="rvps5"><span class="rvts6">in application.php</span></li>
+<ul style="text-indent: 0px; margin-left: 48px; list-style-position: outside;">
+<li class="rvps6" style="margin-left: 0"><span class="rvts6">value: key - yourrandomkey should be a 32 character gibberish string</span></li>
+<li class="rvps6" style="margin-left: 0"><span class="rvts6">value: timezone - the timezone you live in - currently UTC - list of currently aviable: </span><a class="rvts8" href="http://us.php.net/manual/en/timezones.php">http://us.php.net/manual/en/timezones.php</a></li>
+</ul>
+<li class="rvps6" style="margin-left: 0"><span class="rvts6">in database.php</span></li>
+<ul style="text-indent: 0px; margin-left: 48px; list-style-position: outside;">
+<li class="rvps6" style="margin-left: 0"><span class="rvts6">value: host - &nbsp;localhost or 127.0.0.1</span></li>
+<li class="rvps6" style="margin-left: 0"><span class="rvts6">value: database - database name</span></li>
+<li class="rvps6" style="margin-left: 0"><span class="rvts6">value: username - username to db</span></li>
+<li class="rvps6" style="margin-left: 0"><span class="rvts6">value: password - password to db</span></li>
+</ul>
+<li class="rvps5"><span class="rvts6">error.php - no change needed</span></li>
+</ul>
+<p class="rvps6"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">In case you need more granular setting of these things you can find them in laravels &nbsp;/app/application/config/</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">After rewriting values in these files - copy them to &nbsp;/app/application/config/site</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Database</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts6">In the install directory the sql file for the script is included az a </span><span class="rvts11">database.sql</span><span class="rvts6"> file. You need to import this into your database manually, and the stage is set for the software to run.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Log in with username: </span><span class="rvts11">admin</span><span class="rvts6"> password: </span><span class="rvts11">password</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Change your password and delete Install folder</span></p>
+<p></p>
+<p class="rvps3"><span class="rvts9">Created with the Personal Edition of HelpNDoc: </span><a class="rvts10" href="http://www.helpndoc.com/help-authoring-tool">Free help authoring tool</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2013 by Visualcohol. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

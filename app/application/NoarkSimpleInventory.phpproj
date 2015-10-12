@@ -1,0 +1,186 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>NoarkSimpleInventory</Name>
+    <ProjectGuid>{64f8493c-3266-4255-8b9f-63abfab91b90}</ProjectGuid>
+    <RootNamespace>NoarkSimpleInventory</RootNamespace>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="config\site\application.php" />
+    <Compile Include="config\site\database.php" />
+    <Compile Include="config\site\error.php" />
+    <Compile Include="config\.gitignore" />
+    <Compile Include="config\application.php" />
+    <Compile Include="config\auth.php" />
+    <Compile Include="config\cache.php" />
+    <Compile Include="config\database.php" />
+    <Compile Include="config\error.php" />
+    <Compile Include="config\mimes.php" />
+    <Compile Include="config\session.php" />
+    <Compile Include="config\site.php" />
+    <Compile Include="config\strings.php" />
+    <Compile Include="controllers\ajax.php" />
+    <Compile Include="controllers\auth.php" />
+    <Compile Include="controllers\base.php" />
+    <Compile Include="controllers\category.php" />
+    <Compile Include="controllers\contact.php" />
+    <Compile Include="controllers\document.php" />
+    <Compile Include="controllers\home.php" />
+    <Compile Include="controllers\item.php" />
+    <Compile Include="controllers\report.php" />
+    <Compile Include="controllers\setting.php" />
+    <Compile Include="controllers\site.php" />
+    <Compile Include="controllers\transaction.php" />
+    <Compile Include="controllers\user.php" />
+    <Compile Include="language\ar\pagination.php" />
+    <Compile Include="language\ar\validation.php" />
+    <Compile Include="language\bg\pagination.php" />
+    <Compile Include="language\bg\validation.php" />
+    <Compile Include="language\da\pagination.php" />
+    <Compile Include="language\da\validation.php" />
+    <Compile Include="language\de\pagination.php" />
+    <Compile Include="language\de\validation.php" />
+    <Compile Include="language\el\pagination.php" />
+    <Compile Include="language\el\validation.php" />
+    <Compile Include="language\en\pagination.php" />
+    <Compile Include="language\en\site.php" />
+    <Compile Include="language\en\validation.php" />
+    <Compile Include="language\fi\pagination.php" />
+    <Compile Include="language\fi\validation.php" />
+    <Compile Include="language\fr\pagination.php" />
+    <Compile Include="language\fr\validation.php" />
+    <Compile Include="language\he\pagination.php" />
+    <Compile Include="language\he\validation.php" />
+    <Compile Include="language\hu\pagination.php" />
+    <Compile Include="language\hu\site.php" />
+    <Compile Include="language\hu\validation.php" />
+    <Compile Include="language\id\pagination.php" />
+    <Compile Include="language\id\validation.php" />
+    <Compile Include="language\it\pagination.php" />
+    <Compile Include="language\it\validation.php" />
+    <Compile Include="language\ja\pagination.php" />
+    <Compile Include="language\ja\validation.php" />
+    <Compile Include="language\nl\pagination.php" />
+    <Compile Include="language\nl\validation.php" />
+    <Compile Include="language\pl\pagination.php" />
+    <Compile Include="language\pl\validation.php" />
+    <Compile Include="language\pt\pagination.php" />
+    <Compile Include="language\pt\validation.php" />
+    <Compile Include="language\ru\pagination.php" />
+    <Compile Include="language\ru\validation.php" />
+    <Compile Include="language\sq\pagination.php" />
+    <Compile Include="language\sq\validation.php" />
+    <Compile Include="language\sr\pagination.php" />
+    <Compile Include="language\sr\validation.php" />
+    <Compile Include="language\sv\pagination.php" />
+    <Compile Include="language\sv\validation.php" />
+    <Compile Include="language\tr\pagination.php" />
+    <Compile Include="language\tr\validation.php" />
+    <Compile Include="libraries\.gitignore" />
+    <Compile Include="libraries\navigation.php" />
+    <Compile Include="libraries\vsession.php" />
+    <Compile Include="libraries\vsession_.php" />
+    <Compile Include="migrations\.gitignore" />
+    <Compile Include="migrations\2012_06_17_211339_init.php" />
+    <Compile Include="migrations\2013_02_24_094926_user_roles_one_to_many.php" />
+    <Compile Include="models\.gitignore" />
+    <Compile Include="tasks\.gitignore" />
+    <Compile Include="tests\example.test.php" />
+    <Compile Include="views\category\add.php" />
+    <Compile Include="views\category\edit.php" />
+    <Compile Include="views\category\list.php" />
+    <Compile Include="views\contact\add.php" />
+    <Compile Include="views\contact\edit.php" />
+    <Compile Include="views\contact\list.php" />
+    <Compile Include="views\document\add.php" />
+    <Compile Include="views\document\edit.php" />
+    <Compile Include="views\document\list.php" />
+    <Compile Include="views\error\404.php" />
+    <Compile Include="views\error\500.php" />
+    <Compile Include="views\item\add.php" />
+    <Compile Include="views\item\checkin.php" />
+    <Compile Include="views\item\checkout.php" />
+    <Compile Include="views\item\edit.php" />
+    <Compile Include="views\item\list.php" />
+    <Compile Include="views\item\mobile_assign.php" />
+    <Compile Include="views\item\mobile_checkin.php" />
+    <Compile Include="views\item\mobile_checkin_1.php" />
+    <Compile Include="views\item\mobile_checkout.php" />
+    <Compile Include="views\item\mobile_checkout_1.php" />
+    <Compile Include="views\item\mobile_index.php" />
+    <Compile Include="views\layout\blocks\footer.php" />
+    <Compile Include="views\layout\blocks\footer_mob.php" />
+    <Compile Include="views\layout\blocks\head.php" />
+    <Compile Include="views\layout\blocks\header.php" />
+    <Compile Include="views\layout\blocks\head_mob.php" />
+    <Compile Include="views\layout\blocks\item_buttons.php" />
+    <Compile Include="views\layout\blocks\nav_sections.php" />
+    <Compile Include="views\layout\index.php" />
+    <Compile Include="views\layout\login.php" />
+    <Compile Include="views\layout\mobile.php" />
+    <Compile Include="views\layout\status.php" />
+    <Compile Include="views\report\volume.php" />
+    <Compile Include="views\setting\site.php" />
+    <Compile Include="views\transaction\list_advanced.php" />
+    <Compile Include="views\transaction\list_overview.php" />
+    <Compile Include="views\user\add.php" />
+    <Compile Include="views\user\edit.php" />
+    <Compile Include="views\user\list.php" />
+    <Compile Include="views\user\roles.php" />
+    <Compile Include="bundles.php" />
+    <Compile Include="routes.php" />
+    <Compile Include="start.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="config\site" />
+    <Folder Include="config" />
+    <Folder Include="controllers" />
+    <Folder Include="language\ar" />
+    <Folder Include="language\bg" />
+    <Folder Include="language\da" />
+    <Folder Include="language\de" />
+    <Folder Include="language\el" />
+    <Folder Include="language\en" />
+    <Folder Include="language\fi" />
+    <Folder Include="language\fr" />
+    <Folder Include="language\he" />
+    <Folder Include="language\hu" />
+    <Folder Include="language\id" />
+    <Folder Include="language\it" />
+    <Folder Include="language\ja" />
+    <Folder Include="language\nl" />
+    <Folder Include="language\pl" />
+    <Folder Include="language\pt" />
+    <Folder Include="language\ru" />
+    <Folder Include="language\sq" />
+    <Folder Include="language\sr" />
+    <Folder Include="language\sv" />
+    <Folder Include="language\tr" />
+    <Folder Include="language" />
+    <Folder Include="libraries" />
+    <Folder Include="migrations" />
+    <Folder Include="models" />
+    <Folder Include="tasks" />
+    <Folder Include="tests" />
+    <Folder Include="views\category" />
+    <Folder Include="views\contact" />
+    <Folder Include="views\document" />
+    <Folder Include="views\error" />
+    <Folder Include="views\item" />
+    <Folder Include="views\layout\blocks" />
+    <Folder Include="views\layout" />
+    <Folder Include="views\report" />
+    <Folder Include="views\setting" />
+    <Folder Include="views\transaction" />
+    <Folder Include="views\user" />
+    <Folder Include="views" />
+  </ItemGroup>
+</Project>
